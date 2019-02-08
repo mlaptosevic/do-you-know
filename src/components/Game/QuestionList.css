@@ -1,0 +1,24 @@
+.question {
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #515151;
+}
+
+.answers .field .radio label {
+    font-size: 0.75rem;
+}
+
+html {
+    font-size: 18px;
+}
+
+.question-list button {
+    margin: 10px 0px;
+}
+
+.question-list .cards {
+    margin-bottom: 10px;
+}
