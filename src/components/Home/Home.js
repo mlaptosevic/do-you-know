@@ -1,14 +1,18 @@
 import React from 'react';
+import {Redirect} from 'react-router-dom';
 import './Home.css';
 
 class Home extends React.Component {
 
     state = {
-        name: ''
+        name: '',
+        buttonCLicked: false
     }
     
     onPartyClick = (event) => {
         event.preventDefault();
+        this.setState({buttonCLicked: true});
+        this.props.changeName(this.state.name);
     };
 
     onNameChange = (event) => {
@@ -17,6 +21,10 @@ class Home extends React.Component {
     }
 
     render() {
+        if (this.state.buttonCLicked) {
+            return <Redirect to="/game/overview" />
+        }
+
         return(
             <div className="home">
                 <div className="ui basic segment">
